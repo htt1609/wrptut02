@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            margin-top: 10px;
+        }
+        container p{
+            border: blanchedalmond 3px solid;
+            width: 200px;
+            height: 50px;
+            padding-top: 10px;
+            padding-left: 10px;
+            font-style: italic;
+        }
+        #intro {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p id="intro">Please input date you want to display</p>
+    Year: <input type="number" id="year">
+    Month: <input type="number" id="month">
+    Day: <input type="number" id="day">
+    <br>
+    <button onclick="myFunction()">Display it</button>
+    <br>
+    <container>
+        <p><span id="dayDisplay"></span>-<span id="monthDisplay"></span>-<span id="yearDisplay"></span></p>
+    </container>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("year").value;
+            var y = document.getElementById("month").value;
+            var z = document.getElementById("day").value;
+            document.getElementById("dayDisplay").innerHTML=z;
+            document.getElementById("monthDisplay").innerHTML=y;
+            document.getElementById("yearDisplay").innerHTML=x;
+        }
+    </script>
+</body>
+</html>

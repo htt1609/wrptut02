@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tank Game</title>
+</head>
+<body>
+    <div style="width: 190px; height: 190px; border: 1px solid black;" id="battleFiled">
+     
+        <div
+          style="top: 76px; left: 133px;width: 19px; height: 19px; background-image: url('boom.png');background-size: 100% 100%;position: relative;"
+          id="tank">
+        </div>
+      </div>
+     
+      <body style="position: relative;">  
+
+        <img style=" position: absolute; left: 38px; top: 19px;" onclick="A()" id='inspo' src="tank.png">
+    
+        <button id="left" onclick="moveleft()">left</button>
+        <button class="right" onclick="moveright()">right</button>
+        <button class="down" onclick="movedown()">down</button>
+        <button class="up" onclick="moveup()">up</button>
+    
+    <script type="text/javascript">
+    
+    function moveleft() {
+      const img = document.getElementById('inspo');
+      img.style.left = Number(img.style.left.slice(0, -2)) - 19 + 'px';
+    }
+    
+    function moveright() {
+      const img = document.getElementById('inspo');
+      img.style.left = Number(img.style.left.slice(0, -2)) + 19 + 'px';
+    }
+    
+    function moveup() {
+      const img = document.getElementById('inspo');
+      img.style.top = Number(img.style.top.slice(0, -2)) - 19 + 'px';
+    }
+    
+    function movedown() {
+      const img = document.getElementById('inspo');
+      img.style.top = Number(img.style.top.slice(0, -2)) + 19 + 'px';
+    }
+    
+    
+    function A() {
+      document.getElementById('inspo').style.display = "none";
+    }
+    </script>
+    </body>
+    </body>
+    
+    </html>
+    
